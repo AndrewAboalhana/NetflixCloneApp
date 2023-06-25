@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NetflixClone</string>
+    <string name="movies">Movies</string>
+    <string name="search">Search</string>
+    <string name="series">Series</string>
+    <string name="hint_search_bar">What do you want to Watch?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="not_found">Not Found</string>
+</resources>

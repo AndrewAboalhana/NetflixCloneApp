@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movieFragment">
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.aa.netflixclone.ui.movie_fragment.MovieFragment"
+        android:label="TrendingMovies" >
+        <action
+            android:id="@+id/action_movieFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesFragment"
+        android:name="com.aa.netflixclone.ui.series_fragment.SeriesFragment"
+        android:label="TrendingSeries" >
+        <action
+            android:id="@+id/action_seriesFragment_to_seriesDetailsFragment"
+            app:destination="@id/seriesDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.aa.netflixclone.ui.search_fragment.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_seriesDetailsFragment"
+            app:destination="@id/seriesDetailsFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.aa.netflixclone.ui.movie_details_fragment.MovieDetailsFragment"
+        android:label="MovieDetailsFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesDetailsFragment"
+        android:name="com.aa.netflixclone.ui.series_details_fragment.SeriesDetailsFragment"
+        android:label="SeriesDetailsFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

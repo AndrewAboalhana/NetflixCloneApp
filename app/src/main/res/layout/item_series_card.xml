@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.aa.netflixclone.ui.series_fragment.SeriesListUiState" />
+        <variable
+            name="listener"
+            type="com.aa.netflixclone.ui.series_fragment.SeriesInteractionListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/size_160dp"
+        android:layout_height="@dimen/film_card_width"
+        android:onClick="@{()-> listener.onSeriesClicked(item.id)}"
+        android:layout_margin="@dimen/spacing_normal"
+        app:cardCornerRadius="@dimen/radius_medium">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:imageUrl='@{"https://image.tmdb.org/t/p/w500/"+item.image}'
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
